@@ -281,7 +281,7 @@ local function AwardConfirm_Create()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		f = CreateFrame("Frame", "CommDKP_AwardWindowConfirm", UIParent, "ShadowOverlaySmallTemplate");
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		f = CreateFrame("Frame", "CommDKP_AwardWindowConfirm", UIParent, BackdropTemplateMixin and "BackdropTemplate" or nil);
 	end	
 
@@ -369,7 +369,7 @@ local function AwardConfirm_Create()
 
 		if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 			f.cost = CreateFrame("EditBox", nil, f)
-		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 			f.cost = CreateFrame("EditBox", nil, f, BackdropTemplateMixin and "BackdropTemplate" or nil)
 		end
 		

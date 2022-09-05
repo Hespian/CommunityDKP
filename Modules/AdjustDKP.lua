@@ -139,7 +139,7 @@ local function RaidTimerPopout_Create()
 
 		if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 			CommDKP.RaidTimerPopout = CreateFrame("Frame", "CommDKP_RaidTimerPopout", UIParent, "ShadowOverlaySmallTemplate");
-		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 			CommDKP.RaidTimerPopout = CreateFrame("Frame", "CommDKP_RaidTimerPopout", UIParent, BackdropTemplateMixin and "BackdropTemplate" or nil);
 		end
 	
@@ -163,7 +163,7 @@ local function RaidTimerPopout_Create()
 	    -- Popout Close Button
 		if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 			CommDKP.RaidTimerPopout.closeContainer = CreateFrame("Frame", "CommDKPChangeLogClose", CommDKP.RaidTimerPopout)
-		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 			CommDKP.RaidTimerPopout.closeContainer = CreateFrame("Frame", "CommDKPChangeLogClose", CommDKP.RaidTimerPopout, BackdropTemplateMixin and "BackdropTemplate" or nil)
 		end
     
@@ -290,7 +290,7 @@ function CommDKP:AdjustDKPTab_Create()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.ConfigTab2.otherReason = CreateFrame("EditBox", nil, CommDKP.ConfigTab2)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.ConfigTab2.otherReason = CreateFrame("EditBox", nil, CommDKP.ConfigTab2, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 
@@ -438,7 +438,7 @@ function CommDKP:AdjustDKPTab_Create()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.ConfigTab2.addDKP = CreateFrame("EditBox", nil, CommDKP.ConfigTab2)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.ConfigTab2.addDKP = CreateFrame("EditBox", nil, CommDKP.ConfigTab2, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 	
@@ -552,7 +552,7 @@ function CommDKP:AdjustDKPTab_Create()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.ConfigTab2.decayDKP = CreateFrame("EditBox", nil, CommDKP.ConfigTab2)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.ConfigTab2.decayDKP = CreateFrame("EditBox", nil, CommDKP.ConfigTab2, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 	
@@ -680,7 +680,7 @@ function CommDKP:AdjustDKPTab_Create()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.ConfigTab2.RaidTimerContainer = CreateFrame("Frame", nil, CommDKP.ConfigTab2);
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.ConfigTab2.RaidTimerContainer = CreateFrame("Frame", nil, CommDKP.ConfigTab2, BackdropTemplateMixin and "BackdropTemplate" or nil);
 	end
 	
@@ -877,7 +877,7 @@ function CommDKP:AdjustDKPTab_Create()
 
 		if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 			CommDKP.ConfigTab2.RaidTimerContainer.interval = CreateFrame("EditBox", nil, CommDKP.ConfigTab2.RaidTimerContainer)
-		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 			CommDKP.ConfigTab2.RaidTimerContainer.interval = CreateFrame("EditBox", nil, CommDKP.ConfigTab2.RaidTimerContainer, BackdropTemplateMixin and "BackdropTemplate" or nil)
 		end
 		
@@ -946,7 +946,7 @@ function CommDKP:AdjustDKPTab_Create()
 
 		if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 			CommDKP.ConfigTab2.RaidTimerContainer.bonusvalue = CreateFrame("EditBox", nil, CommDKP.ConfigTab2.RaidTimerContainer)
-		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 			CommDKP.ConfigTab2.RaidTimerContainer.bonusvalue = CreateFrame("EditBox", nil, CommDKP.ConfigTab2.RaidTimerContainer, BackdropTemplateMixin and "BackdropTemplate" or nil)
 		end
 	

@@ -10,7 +10,7 @@ local function CreateRow(parent, id) -- Create 3 buttons for each row in the lis
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		f = CreateFrame("Button", "$parentLine"..id, parent)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		f = CreateFrame("Button", "$parentLine"..id, parent, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 	
@@ -327,7 +327,7 @@ function CommDKP:PriceTab_Create()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.ConfigTab7.PriceTable.Headers = CreateFrame("Frame", "CommDKPPriceTableHeaders", CommDKP.ConfigTab7)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.ConfigTab7.PriceTable.Headers = CreateFrame("Frame", "CommDKPPriceTableHeaders", CommDKP.ConfigTab7, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 	

@@ -45,7 +45,7 @@ local function GenerateDKPTables(table, format)
 		elseif table == CommDKP:GetTable(CommDKP_Loot, true) then
 			local numrows;
 			local baseUrl = "https://classic.wowhead.com/";
-			if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+			if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 				baseUrl = "https://tbc.wowhead.com/";
 			end
 

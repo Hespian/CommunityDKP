@@ -10,7 +10,7 @@ function CommDKP:ClassGraph()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		graph = CreateFrame("Frame", "CommDKPClassIcons", CommDKP.ConfigTab1)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		graph = CreateFrame("Frame", "CommDKPClassIcons", CommDKP.ConfigTab1, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 
@@ -55,7 +55,7 @@ function CommDKP:ClassGraph()
 
 		if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 			graph.icons[i].bar = CreateFrame("Frame", "CommDKP"..i.."Graph", graph)
-		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 			graph.icons[i].bar = CreateFrame("Frame", "CommDKP"..i.."Graph", graph, BackdropTemplateMixin and "BackdropTemplate" or nil)
 		end
   		

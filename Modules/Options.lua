@@ -102,7 +102,7 @@ function CommDKP:Options()
     for i=1, 6 do
       if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
         CommDKP.ConfigTab4.default[i] = CreateFrame("EditBox", nil, CommDKP.ConfigTab4)
-      elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+      elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
         CommDKP.ConfigTab4.default[i] = CreateFrame("EditBox", nil, CommDKP.ConfigTab4, BackdropTemplateMixin and "BackdropTemplate" or nil)
       end
             
@@ -272,7 +272,7 @@ function CommDKP:Options()
 
         if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
           CommDKP.ConfigTab4.DefaultMinBids.SlotBox[i] = CreateFrame("EditBox", nil, CommDKP.ConfigTab4)
-        elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+        elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
           CommDKP.ConfigTab4.DefaultMinBids.SlotBox[i] = CreateFrame("EditBox", nil, CommDKP.ConfigTab4, BackdropTemplateMixin and "BackdropTemplate" or nil)
         end
         
@@ -544,7 +544,7 @@ function CommDKP:Options()
       for i=1, 17 do
         if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
           CommDKP.ConfigTab4.DefaultMaxBids.SlotBox[i] = CreateFrame("EditBox", nil, CommDKP.ConfigTab4)
-        elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+        elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
           CommDKP.ConfigTab4.DefaultMaxBids.SlotBox[i] = CreateFrame("EditBox", nil, CommDKP.ConfigTab4, BackdropTemplateMixin and "BackdropTemplate" or nil)
         end
 
@@ -783,7 +783,7 @@ function CommDKP:Options()
     -- Bid Timer Slider
     CommDKP.ConfigTab4.bidTimerSlider = CreateFrame("SLIDER", "$parentBidTimerSlider", CommDKP.ConfigTab4, "CommDKPOptionsSliderTemplate");
 
-    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+    if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
       Mixin(CommDKP.ConfigTab4.bidTimerSlider, BackdropTemplateMixin)
     end
     
@@ -817,7 +817,7 @@ function CommDKP:Options()
 
     if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
       CommDKP.ConfigTab4.bidTimer = CreateFrame("EditBox", nil, CommDKP.ConfigTab4)
-    elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+    elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
       CommDKP.ConfigTab4.bidTimer = CreateFrame("EditBox", nil, CommDKP.ConfigTab4, BackdropTemplateMixin and "BackdropTemplate" or nil)
     end
     
@@ -856,7 +856,7 @@ function CommDKP:Options()
     CommDKP.ConfigTab4.TooltipHistorySlider:SetPoint("TOP", CommDKP.ConfigTab4, "TOP", 1, -107);
   end
 
-  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     Mixin(CommDKP.ConfigTab4.TooltipHistorySlider, BackdropTemplateMixin)
   end
   
@@ -886,7 +886,7 @@ function CommDKP:Options()
 
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
     CommDKP.ConfigTab4.TooltipHistory = CreateFrame("EditBox", nil, CommDKP.ConfigTab4)
-  elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+  elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     CommDKP.ConfigTab4.TooltipHistory = CreateFrame("EditBox", nil, CommDKP.ConfigTab4, BackdropTemplateMixin and "BackdropTemplate" or nil)
   end
   
@@ -926,7 +926,7 @@ function CommDKP:Options()
   end
 
   
-  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     Mixin(CommDKP.ConfigTab4.historySlider, BackdropTemplateMixin)
   end
 
@@ -958,7 +958,7 @@ function CommDKP:Options()
 
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
     CommDKP.ConfigTab4.history = CreateFrame("EditBox", nil, CommDKP.ConfigTab4)
-  elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+  elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     CommDKP.ConfigTab4.history = CreateFrame("EditBox", nil, CommDKP.ConfigTab4, BackdropTemplateMixin and "BackdropTemplate" or nil)
   end
  
@@ -990,7 +990,7 @@ function CommDKP:Options()
   -- DKP History Limit Slider
   CommDKP.ConfigTab4.DKPHistorySlider = CreateFrame("SLIDER", "$parentDKPHistorySlider", CommDKP.ConfigTab4, "CommDKPOptionsSliderTemplate");
 
-  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     Mixin(CommDKP.ConfigTab4.DKPHistorySlider, BackdropTemplateMixin)
   end
 
@@ -1021,7 +1021,7 @@ function CommDKP:Options()
 
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
     CommDKP.ConfigTab4.DKPHistory = CreateFrame("EditBox", nil, CommDKP.ConfigTab4)
-  elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+  elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     CommDKP.ConfigTab4.DKPHistory = CreateFrame("EditBox", nil, CommDKP.ConfigTab4, BackdropTemplateMixin and "BackdropTemplate" or nil)
   end
   
@@ -1053,7 +1053,7 @@ function CommDKP:Options()
   -- Bid Timer Size Slider
   CommDKP.ConfigTab4.TimerSizeSlider = CreateFrame("SLIDER", "$parentBidTimerSizeSlider", CommDKP.ConfigTab4, "CommDKPOptionsSliderTemplate");
 
-  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     Mixin(CommDKP.ConfigTab4.TimerSizeSlider, BackdropTemplateMixin)
   end
  
@@ -1086,7 +1086,7 @@ function CommDKP:Options()
 
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
     CommDKP.ConfigTab4.TimerSize = CreateFrame("EditBox", nil, CommDKP.ConfigTab4)
-  elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+  elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     CommDKP.ConfigTab4.TimerSize = CreateFrame("EditBox", nil, CommDKP.ConfigTab4, BackdropTemplateMixin and "BackdropTemplate" or nil)
   end
 
@@ -1119,7 +1119,7 @@ function CommDKP:Options()
   -- UI Scale Size Slider
   CommDKP.ConfigTab4.CommDKPScaleSize = CreateFrame("SLIDER", "$parentCommDKPScaleSizeSlider", CommDKP.ConfigTab4, "CommDKPOptionsSliderTemplate");
 
-  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+  if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     Mixin(CommDKP.ConfigTab4.CommDKPScaleSize, BackdropTemplateMixin)
   end
   
@@ -1151,7 +1151,7 @@ function CommDKP:Options()
 
   if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
     CommDKP.ConfigTab4.UIScaleSize = CreateFrame("EditBox", nil, CommDKP.ConfigTab4)
-  elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+  elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     CommDKP.ConfigTab4.UIScaleSize = CreateFrame("EditBox", nil, CommDKP.ConfigTab4, BackdropTemplateMixin and "BackdropTemplate" or nil)
   end
   

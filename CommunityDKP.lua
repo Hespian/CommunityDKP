@@ -243,7 +243,7 @@ function CommDKP:CreateMenu()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.UIConfig = CreateFrame("Frame", "CommDKPConfig", UIParent, "ShadowOverlaySmallTemplate")
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.UIConfig = CreateFrame("Frame", "CommDKPConfig", UIParent, BackdropTemplateMixin and "BackdropTemplate" or nil)  --UIPanelDialogueTemplate, ShadowOverlaySmallTemplate
 	end
 	
@@ -270,13 +270,13 @@ function CommDKP:CreateMenu()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.UIConfig.closeContainer = CreateFrame("Frame", "CommDKPTitle", CommDKP.UIConfig)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.UIConfig.closeContainer = CreateFrame("Frame", "CommDKPTitle", CommDKP.UIConfig, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 
 	CommDKP.UIConfig.closeContainer:SetPoint("CENTER", CommDKP.UIConfig, "TOPRIGHT", -4, 0)
 
-	if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		Mixin(CommDKP.UIConfig.closeContainer, BackdropTemplateMixin)
 	end
 
@@ -291,7 +291,7 @@ function CommDKP:CreateMenu()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.UIConfig.closeBtn = CreateFrame("Button", nil, CommDKP.UIConfig, "UIPanelCloseButton")
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.UIConfig.closeBtn = CreateFrame("Button", nil, CommDKP.UIConfig, "UIPanelCloseButton", BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 	
@@ -309,14 +309,14 @@ function CommDKP:CreateMenu()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.DKPTable_Headers = CreateFrame("Frame", "CommDKPDKPTableHeaders", CommDKP.UIConfig)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.DKPTable_Headers = CreateFrame("Frame", "CommDKPDKPTableHeaders", CommDKP.UIConfig, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 	
 	CommDKP.DKPTable_Headers:SetSize(500, 22)
 	CommDKP.DKPTable_Headers:SetPoint("BOTTOMLEFT", CommDKP.DKPTable, "TOPLEFT", 0, 1)
 
-	if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		Mixin(CommDKP.DKPTable_Headers, BackdropTemplateMixin)
 	end
 	
@@ -335,7 +335,7 @@ function CommDKP:CreateMenu()
 		SortButtons.player = CreateFrame("Button", "$ParentSortButtonPlayer", CommDKP.DKPTable_Headers)
 		SortButtons.class = CreateFrame("Button", "$ParentSortButtonClass", CommDKP.DKPTable_Headers)
 		SortButtons.dkp = CreateFrame("Button", "$ParentSortButtonDkp", CommDKP.DKPTable_Headers)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		SortButtons.player = CreateFrame("Button", "$ParentSortButtonPlayer", CommDKP.DKPTable_Headers, BackdropTemplateMixin and "BackdropTemplate" or nil)
 		SortButtons.class = CreateFrame("Button", "$ParentSortButtonClass", CommDKP.DKPTable_Headers, BackdropTemplateMixin and "BackdropTemplate" or nil)
 		SortButtons.dkp = CreateFrame("Button", "$ParentSortButtonDkp", CommDKP.DKPTable_Headers, BackdropTemplateMixin and "BackdropTemplate" or nil)
@@ -440,7 +440,7 @@ function CommDKP:CreateMenu()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.UIConfig.search = CreateFrame("EditBox", nil, CommDKP.UIConfig)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.UIConfig.search = CreateFrame("EditBox", nil, CommDKP.UIConfig, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 	
@@ -587,7 +587,7 @@ function CommDKP:CreateMenu()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.UIConfig.expand = CreateFrame("Frame", "CommDKPTitle", CommDKP.UIConfig)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.UIConfig.expand = CreateFrame("Frame", "CommDKPTitle", CommDKP.UIConfig, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 	
@@ -625,7 +625,7 @@ function CommDKP:CreateMenu()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.UIConfig.TitleBar = CreateFrame("Frame", "CommDKPTitle", CommDKP.UIConfig, "ShadowOverlaySmallTemplate")
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.UIConfig.TitleBar = CreateFrame("Frame", "CommDKPTitle", CommDKP.UIConfig, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 	
@@ -650,7 +650,7 @@ function CommDKP:CreateMenu()
 
 		if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 			CommDKP.ChangeLogDisplay = CreateFrame("Frame", "CommDKP_ChangeLogDisplay", UIParent, "ShadowOverlaySmallTemplate");
-		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 			CommDKP.ChangeLogDisplay = CreateFrame("Frame", "CommDKP_ChangeLogDisplay", UIParent, BackdropTemplateMixin and "BackdropTemplate" or nil);
 		end
 
@@ -700,7 +700,7 @@ function CommDKP:CreateMenu()
 
 		if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 			CommDKP.ChangeLogDisplay.closeContainer = CreateFrame("Frame", "CommDKPChangeLogClose", CommDKP.ChangeLogDisplay)
-		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+		elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 			CommDKP.ChangeLogDisplay.closeContainer = CreateFrame("Frame", "CommDKPChangeLogClose", CommDKP.ChangeLogDisplay, BackdropTemplateMixin and "BackdropTemplate" or nil)
 		end
 		

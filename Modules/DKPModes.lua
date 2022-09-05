@@ -27,7 +27,7 @@ function CommDKP:DKPModesFrame_Create()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		f = CreateFrame("Frame", "CommDKP_DKPModesFrame", UIParent);
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		f = CreateFrame("Frame", "CommDKP_DKPModesFrame", UIParent, BackdropTemplateMixin and "BackdropTemplate" or nil);
 	end
 	
@@ -72,7 +72,7 @@ function CommDKP:DKPModesFrame_Create()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		f.ScrollFrame = CreateFrame("ScrollFrame", nil, f);
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		f.ScrollFrame = CreateFrame("ScrollFrame", nil, f, BackdropTemplateMixin and "BackdropTemplate" or nil);
 	end
 	
@@ -93,7 +93,7 @@ function CommDKP:DKPModesFrame_Create()
 	-- Close Button
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		f.closeContainer = CreateFrame("Frame", "MonDKModesWindowCloseButtonContainer", f)
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		f.closeContainer = CreateFrame("Frame", "MonDKModesWindowCloseButtonContainer", f, BackdropTemplateMixin and "BackdropTemplate" or nil)
 	end
 	

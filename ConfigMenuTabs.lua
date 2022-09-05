@@ -125,7 +125,7 @@ function CommDKP:ConfigMenuTabs()
 
 	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		CommDKP.UIConfig.TabMenu = CreateFrame("Frame", "CommDKPCommDKP.ConfigTabMenu", CommDKP.UIConfig);
-	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 		CommDKP.UIConfig.TabMenu = CreateFrame("Frame", "CommDKPCommDKP.ConfigTabMenu", CommDKP.UIConfig, BackdropTemplateMixin and "BackdropTemplate" or nil);
 	end
 	
