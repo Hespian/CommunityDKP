@@ -816,7 +816,6 @@ core.L = {
   CHANGELOG6 = "",
   CHANGELOG7 = "",
   CHANGELOG8 = "",
-  CHANGELOG8 = "",
   CHANGELOG9 = "Dézi @ Everlook",
   CHANGELOG10 = "CommunityDKP Discord: https://discord.gg/dXXK4vH"
 }
