@@ -875,14 +875,15 @@ core.L = {
   MIGRATIONCANCELED     = "Migration canceled.|n|nPlease disable MonolithDKP and /reload the UI if you want to continue with CommunityDKP without using your current tables and settings.",
   MIGRATIONCOMPLETED    = "Migration complete.|n|nPlease disable MonolithDKP and /reload the UI.",
 
-  CHANGELOG1 = "CommunityDKP - v3.2.9-r73-bcc",
-  CHANGELOG2 = "- fixed Hydross the Unstable encounter ID",
-  CHANGELOG3 = "- Hydross should now grant auto DKP if enabled",
+  CHANGELOG1 = "CommunityDKP - v3.2.9-r74-wotlkc", 
+  CHANGELOG2 = "- Fix errors in Wrath of the Lich King Classic",   
+  CHANGELOG3 = "",
   CHANGELOG4 = "",
   CHANGELOG5 = "",
   CHANGELOG6 = "",
   CHANGELOG7 = "",
   CHANGELOG8 = "",
-  CHANGELOG9 = "Taidtuskecyh @ Gehennas",
+  CHANGELOG8 = "",
+  CHANGELOG9 = "Dézi @ Everlook",
   CHANGELOG10 = "CommunityDKP Discord: https://discord.gg/dXXK4vH"
 }

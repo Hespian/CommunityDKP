@@ -894,16 +894,16 @@ if GetLocale() == "deDE" then
     MIGRATIONCOMPLETED    = "Migration abgeschlossen.|n|nBitte deaktivieren Sie MonolithDKP und laden Sie das UI neu. (/reload)",
 
     --TODO TRANSLATE:
-    CHANGELOG1 = "CommunityDKP - v3.2.9-r73-bcc", 
-    CHANGELOG2 = "- fixed Hydross the Unstable encounter ID",   
-    CHANGELOG3 = "- Hydross should now grant auto DKP if enabled",
+    CHANGELOG1 = "CommunityDKP - v3.2.9-r74-wotlkc", 
+    CHANGELOG2 = "- Fix errors in Wrath of the Lich King Classic",   
+    CHANGELOG3 = "",
     CHANGELOG4 = "",
     CHANGELOG5 = "",
     CHANGELOG6 = "",
     CHANGELOG7 = "",
     CHANGELOG8 = "",
     CHANGELOG8 = "",
-    CHANGELOG9 = "Taidtuskecyh @ Gehennas",
+    CHANGELOG9 = "Dézi @ Everlook",
     CHANGELOG10 = "CommunityDKP Discord: https://discord.gg/dXXK4vH"
       }
 end
