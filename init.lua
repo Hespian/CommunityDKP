@@ -630,12 +630,12 @@ function CommDKP_OnEvent(self, event, arg1, ...)
 		for i, lootLink in pairs(pendingLoot) do
 			local awarded = false
 			for containerSlot = 0, NUM_BAG_FRAMES do
-				for bagSlot = 1, GetContainerNumSlots(containerSlot) do
-					local containerLink = GetContainerItemLink(containerSlot, bagSlot)
+				for bagSlot = 1, C_Container.GetContainerNumSlots(containerSlot) do
+					local containerLink = C_Container.GetContainerItemLink(containerSlot, bagSlot)
 
 					if not awarded and containerLink ~= nil and containerLink == lootLink then
 						ClearCursor()
-						PickupContainerItem(containerSlot, bagSlot)
+						C_Container.PickupContainerItem(containerSlot, bagSlot)
 						local tradeSlot = TradeFrame_GetAvailableSlot()
 						if tradeSlot ~= nil and tradeSlot <= 6 then
 							ClickTradeButton(tradeSlot)
