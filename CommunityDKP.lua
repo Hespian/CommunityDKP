@@ -383,15 +383,15 @@ function CommDKP:CreateMenu()
 	local reason = LibDD:UIDropDownMenu_CreateInfo()
 		reason.func = self.SetValue
 		reason.fontObject = "CommDKPSmallCenter"
-		reason.text, reason.arg1, reason.arg2, reason.checked, reason.isNotRadio = L["CLASS"], "class", L["CLASS"], "class" == core.CenterSort, true
+		reason.Text, reason.arg1, reason.arg2, reason.checked, reason.isNotRadio = L["CLASS"], "class", L["CLASS"], "class" == core.CenterSort, true
 		LibDD:UIDropDownMenu_AddButton(reason)
-		reason.text, reason.arg1, reason.arg2, reason.checked, reason.isNotRadio = L["SPEC"], "spec", L["SPEC"], "spec" == core.CenterSort, true
+		reason.Text, reason.arg1, reason.arg2, reason.checked, reason.isNotRadio = L["SPEC"], "spec", L["SPEC"], "spec" == core.CenterSort, true
 		LibDD:UIDropDownMenu_AddButton(reason)
-		reason.text, reason.arg1, reason.arg2, reason.checked, reason.isNotRadio = L["RANK"], "rank", L["RANK"], "rank" == core.CenterSort, true
+		reason.Text, reason.arg1, reason.arg2, reason.checked, reason.isNotRadio = L["RANK"], "rank", L["RANK"], "rank" == core.CenterSort, true
 		LibDD:UIDropDownMenu_AddButton(reason)
-		reason.text, reason.arg1, reason.arg2, reason.checked, reason.isNotRadio = L["ROLE"], "role", L["ROLE"], "role" == core.CenterSort, true
+		reason.Text, reason.arg1, reason.arg2, reason.checked, reason.isNotRadio = L["ROLE"], "role", L["ROLE"], "role" == core.CenterSort, true
 		LibDD:UIDropDownMenu_AddButton(reason)
-		reason.text, reason.arg1, reason.arg2, reason.checked, reason.isNotRadio = L["VERSION"], "version", L["VERSION"], "version" == core.CenterSort, true
+		reason.Text, reason.arg1, reason.arg2, reason.checked, reason.isNotRadio = L["VERSION"], "version", L["VERSION"], "version" == core.CenterSort, true
 		LibDD:UIDropDownMenu_AddButton(reason)
 	end)
 	-- Dropdown Menu Function
@@ -541,7 +541,7 @@ function CommDKP:CreateMenu()
 				teamList = CommDKP:GetGuildTeamList()
 
 				for i=1, #teamList do
-					dropDownMenuItem.text = teamList[i][2]
+					dropDownMenuItem.Text = teamList[i][2]
 					dropDownMenuItem.arg1 = teamList[i][2] -- name
 					dropDownMenuItem.arg2 = teamList[i][1] -- index
 					dropDownMenuItem.checked = teamList[i][1] == tonumber(CommDKP:GetCurrentTeamIndex())
@@ -719,9 +719,9 @@ function CommDKP:CreateMenu()
 		CommDKP.ChangeLogDisplay.DontShowCheck = CreateFrame("CheckButton", nil, CommDKP.ChangeLogDisplay, "UICheckButtonTemplate");
 		CommDKP.ChangeLogDisplay.DontShowCheck:SetChecked(false)
 		CommDKP.ChangeLogDisplay.DontShowCheck:SetScale(0.6);
-		CommDKP.ChangeLogDisplay.DontShowCheck.text:SetText("  |cff5151de"..L["DONTSHOW"].."|r");
-		CommDKP.ChangeLogDisplay.DontShowCheck.text:SetScale(1.5);
-		CommDKP.ChangeLogDisplay.DontShowCheck.text:SetFontObject("CommDKPSmallLeft")
+		CommDKP.ChangeLogDisplay.DontShowCheck.Text:SetText("  |cff5151de"..L["DONTSHOW"].."|r");
+		CommDKP.ChangeLogDisplay.DontShowCheck.Text:SetScale(1.5);
+		CommDKP.ChangeLogDisplay.DontShowCheck.Text:SetFontObject("CommDKPSmallLeft")
 		CommDKP.ChangeLogDisplay.DontShowCheck:SetPoint("LEFT", CommDKP.ChangeLogDisplay.ChangeLogHeader, "RIGHT", 10, 0);
 		CommDKP.ChangeLogDisplay.DontShowCheck:SetScript("OnClick", function(self)
 			if self:GetChecked() then

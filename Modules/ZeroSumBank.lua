@@ -235,9 +235,9 @@ function CommDKP:ZeroSumBank_Create()
 	f.IncludeStandby = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 	f.IncludeStandby:SetChecked(core.DB.modes.ZeroSumStandby)
 	f.IncludeStandby:SetScale(0.6);
-	f.IncludeStandby.text:SetText("  |cff5151de"..L["INCLUDESTANDBY"].."|r");
-	f.IncludeStandby.text:SetScale(1.5);
-	f.IncludeStandby.text:SetFontObject("CommDKPSmallLeft")
+	f.IncludeStandby.Text:SetText("  |cff5151de"..L["INCLUDESTANDBY"].."|r");
+	f.IncludeStandby.Text:SetScale(1.5);
+	f.IncludeStandby.Text:SetFontObject("CommDKPSmallLeft")
 	f.IncludeStandby:SetPoint("TOPLEFT", f.Distribute, "BOTTOMLEFT", -15, -10);
 	f.IncludeStandby:SetScript("OnClick", function(self)
 		core.DB.modes.ZeroSumStandby = self:GetChecked();

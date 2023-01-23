@@ -166,12 +166,12 @@ function CommDKP:ConfigMenuTabs()
 	---------------------------------------
 	-- MENU TAB 1
 	---------------------------------------
-	CommDKP.ConfigTab1.text = CommDKP.ConfigTab1:CreateFontString(nil, "OVERLAY")   -- Filters header
-	CommDKP.ConfigTab1.text:ClearAllPoints();
-	CommDKP.ConfigTab1.text:SetFontObject("CommDKPLargeCenter")
-	CommDKP.ConfigTab1.text:SetPoint("TOPLEFT", CommDKP.ConfigTab1, "TOPLEFT", 15, -10);
-	CommDKP.ConfigTab1.text:SetText(L["FILTERS"]);
-	CommDKP.ConfigTab1.text:SetScale(1.2)
+	CommDKP.ConfigTab1.Text = CommDKP.ConfigTab1:CreateFontString(nil, "OVERLAY")   -- Filters header
+	CommDKP.ConfigTab1.Text:ClearAllPoints();
+	CommDKP.ConfigTab1.Text:SetFontObject("CommDKPLargeCenter")
+	CommDKP.ConfigTab1.Text:SetPoint("TOPLEFT", CommDKP.ConfigTab1, "TOPLEFT", 15, -10);
+	CommDKP.ConfigTab1.Text:SetText(L["FILTERS"]);
+	CommDKP.ConfigTab1.Text:SetScale(1.2)
 
 	local checkBtn = {}
 	CommDKP.ConfigTab1.checkBtn = checkBtn;
@@ -182,7 +182,7 @@ function CommDKP:ConfigMenuTabs()
 		if i <= 10 then CommDKP.ConfigTab1.checkBtn[i]:SetChecked(true) else CommDKP.ConfigTab1.checkBtn[i]:SetChecked(false) end;
 		CommDKP.ConfigTab1.checkBtn[i]:SetID(i)
 		if i <= 9 then
-			CommDKP.ConfigTab1.checkBtn[i].text:SetText("|cff5151de"..API_CLASSES[core.classes[i]].."|r");
+			CommDKP.ConfigTab1.checkBtn[i].Text:SetText("|cff5151de"..API_CLASSES[core.classes[i]].."|r");
 		end
 		if i==10 then
 			CommDKP.ConfigTab1.checkBtn[i]:SetScript("OnClick",
@@ -213,7 +213,7 @@ function CommDKP:ConfigMenuTabs()
 		else
 			CommDKP.ConfigTab1.checkBtn[i]:SetScript("OnClick", CommDKPFilterChecks)
 		end
-		CommDKP.ConfigTab1.checkBtn[i].text:SetFontObject("CommDKPSmall")
+		CommDKP.ConfigTab1.checkBtn[i].Text:SetFontObject("CommDKPSmall")
 	end
 
 	-- Class Check Buttons:
@@ -228,21 +228,21 @@ function CommDKP:ConfigMenuTabs()
 	CommDKP.ConfigTab1.checkBtn[9]:SetPoint("TOPLEFT", CommDKP.ConfigTab1.checkBtn[4], "BOTTOMLEFT", 0, -10);
 
 	CommDKP.ConfigTab1.checkBtn[10]:SetPoint("BOTTOMRIGHT", CommDKP.ConfigTab1.checkBtn[3], "TOPLEFT", 50, 0);
-	CommDKP.ConfigTab1.checkBtn[10].text:SetText("|cff5151de"..L["ALLCLASSES"].."|r");
+	CommDKP.ConfigTab1.checkBtn[10].Text:SetText("|cff5151de"..L["ALLCLASSES"].."|r");
 	CommDKP.ConfigTab1.checkBtn[11]:SetPoint("TOPLEFT", CommDKP.ConfigTab1.checkBtn[6], "BOTTOMLEFT", 50, 0);
-	CommDKP.ConfigTab1.checkBtn[11].text:SetText("|cff5151de"..L["INPARTYRAID"].."|r");         -- executed in filterDKPTable (CommunityDKP.lua)
+	CommDKP.ConfigTab1.checkBtn[11].Text:SetText("|cff5151de"..L["INPARTYRAID"].."|r");         -- executed in filterDKPTable (CommunityDKP.lua)
 
 	CommDKP.ConfigTab1.checkBtn[12] = CreateFrame("CheckButton", nil, CommDKP.ConfigTab1, "UICheckButtonTemplate");
 	CommDKP.ConfigTab1.checkBtn[12]:SetID(12)
-	CommDKP.ConfigTab1.checkBtn[12].text:SetText("|cff5151de"..L["ONLINE"].."|r");
-	CommDKP.ConfigTab1.checkBtn[12].text:SetFontObject("CommDKPSmall")
+	CommDKP.ConfigTab1.checkBtn[12].Text:SetText("|cff5151de"..L["ONLINE"].."|r");
+	CommDKP.ConfigTab1.checkBtn[12].Text:SetFontObject("CommDKPSmall")
 	CommDKP.ConfigTab1.checkBtn[12]:SetScript("OnClick", CommDKPFilterChecks)
 	CommDKP.ConfigTab1.checkBtn[12]:SetPoint("TOPLEFT", CommDKP.ConfigTab1.checkBtn[11], "TOPRIGHT", 100, 0);
 
 	CommDKP.ConfigTab1.checkBtn[13] = CreateFrame("CheckButton", nil, CommDKP.ConfigTab1, "UICheckButtonTemplate");
 	CommDKP.ConfigTab1.checkBtn[13]:SetID(13)
-	CommDKP.ConfigTab1.checkBtn[13].text:SetText("|cff5151de"..L["NOTINRAIDFILTER"].."|r");
-	CommDKP.ConfigTab1.checkBtn[13].text:SetFontObject("CommDKPSmall")
+	CommDKP.ConfigTab1.checkBtn[13].Text:SetText("|cff5151de"..L["NOTINRAIDFILTER"].."|r");
+	CommDKP.ConfigTab1.checkBtn[13].Text:SetFontObject("CommDKPSmall")
 	CommDKP.ConfigTab1.checkBtn[13]:SetScript("OnClick", function(self)
 		CommDKP.ConfigTab1.checkBtn[13]:SetChecked(false);
 		CommDKPFilterChecks(self)
@@ -277,12 +277,12 @@ function CommDKP:ConfigMenuTabs()
 	---------------------------------------
 	-- Loot History TAB
 	---------------------------------------
-	CommDKP.ConfigTab5.text = CommDKP.ConfigTab5:CreateFontString(nil, "OVERLAY")
-	CommDKP.ConfigTab5.text:ClearAllPoints();
-	CommDKP.ConfigTab5.text:SetFontObject("CommDKPLargeLeft");
-	CommDKP.ConfigTab5.text:SetPoint("TOPLEFT", CommDKP.ConfigTab5, "TOPLEFT", 15, -10);
-	CommDKP.ConfigTab5.text:SetText(L["LOOTHISTORY"]);
-	CommDKP.ConfigTab5.text:SetScale(1.2)
+	CommDKP.ConfigTab5.Text = CommDKP.ConfigTab5:CreateFontString(nil, "OVERLAY")
+	CommDKP.ConfigTab5.Text:ClearAllPoints();
+	CommDKP.ConfigTab5.Text:SetFontObject("CommDKPLargeLeft");
+	CommDKP.ConfigTab5.Text:SetPoint("TOPLEFT", CommDKP.ConfigTab5, "TOPLEFT", 15, -10);
+	CommDKP.ConfigTab5.Text:SetText(L["LOOTHISTORY"]);
+	CommDKP.ConfigTab5.Text:SetScale(1.2)
 	CommDKP.ConfigTab5.inst = CommDKP.ConfigTab5:CreateFontString(nil, "OVERLAY")
 	CommDKP.ConfigTab5.inst:ClearAllPoints();
 	CommDKP.ConfigTab5.inst:SetFontObject("CommDKPSmallRight");
@@ -304,12 +304,12 @@ function CommDKP:ConfigMenuTabs()
 	---------------------------------------
 	-- DKP History Tab
 	---------------------------------------
-	CommDKP.ConfigTab6.text = CommDKP.ConfigTab6:CreateFontString(nil, "OVERLAY")
-	CommDKP.ConfigTab6.text:ClearAllPoints();
-	CommDKP.ConfigTab6.text:SetFontObject("CommDKPLargeLeft");
-	CommDKP.ConfigTab6.text:SetPoint("TOPLEFT", CommDKP.ConfigTab6, "TOPLEFT", 15, -10);
-	CommDKP.ConfigTab6.text:SetText(L["DKPHISTORY"]);
-	CommDKP.ConfigTab6.text:SetScale(1.2)
+	CommDKP.ConfigTab6.Text = CommDKP.ConfigTab6:CreateFontString(nil, "OVERLAY")
+	CommDKP.ConfigTab6.Text:ClearAllPoints();
+	CommDKP.ConfigTab6.Text:SetFontObject("CommDKPLargeLeft");
+	CommDKP.ConfigTab6.Text:SetPoint("TOPLEFT", CommDKP.ConfigTab6, "TOPLEFT", 15, -10);
+	CommDKP.ConfigTab6.Text:SetText(L["DKPHISTORY"]);
+	CommDKP.ConfigTab6.Text:SetScale(1.2)
 
 	CommDKP.ConfigTab6.inst = CommDKP.ConfigTab6:CreateFontString(nil, "OVERLAY")
 	CommDKP.ConfigTab6.inst:ClearAllPoints();

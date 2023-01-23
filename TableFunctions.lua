@@ -483,7 +483,7 @@ local function RightClickMenu(self)
 	}
 
 	if #core.SelectedData < 2 then
-		menu[1].text = core.WorkingTable[self.index].player;
+		menu[1].Text = core.WorkingTable[self.index].player;
 		menu[2] = { text = L["INVITE"].." "..core.WorkingTable[self.index].player.." "..L["TORAID"], notCheckable = true, func = function()
 			InviteUnit(core.WorkingTable[self.index].player)
 		end }

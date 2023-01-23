@@ -1185,8 +1185,8 @@ function CommDKP:Options()
   CommDKP.ConfigTab4.SuppressNotifications:SetPoint("TOP", CommDKP.ConfigTab4.TimerSizeSlider, "BOTTOMLEFT", 0, -35)
   CommDKP.ConfigTab4.SuppressNotifications:SetChecked(core.DB.defaults.SuppressNotifications)
   CommDKP.ConfigTab4.SuppressNotifications:SetScale(0.8)
-  CommDKP.ConfigTab4.SuppressNotifications.text:SetText("|cff5151de"..L["SUPPRESSNOTIFICATIONS"].."|r");
-  CommDKP.ConfigTab4.SuppressNotifications.text:SetFontObject("CommDKPSmall")
+  CommDKP.ConfigTab4.SuppressNotifications.Text:SetText("|cff5151de"..L["SUPPRESSNOTIFICATIONS"].."|r");
+  CommDKP.ConfigTab4.SuppressNotifications.Text:SetFontObject("CommDKPSmall")
   CommDKP.ConfigTab4.SuppressNotifications:SetScript("OnEnter", function(self)
     GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
     GameTooltip:SetText(L["SUPPRESSNOTIFICATIONS"], 0.25, 0.75, 0.90, 1, true)
@@ -1213,8 +1213,8 @@ function CommDKP:Options()
   CommDKP.ConfigTab4.CombatLogging:SetPoint("TOP", CommDKP.ConfigTab4.SuppressNotifications, "BOTTOM", 0, 0)
   CommDKP.ConfigTab4.CombatLogging:SetChecked(core.DB.defaults.AutoLog)
   CommDKP.ConfigTab4.CombatLogging:SetScale(0.8)
-  CommDKP.ConfigTab4.CombatLogging.text:SetText("|cff5151de"..L["AUTOCOMBATLOG"].."|r");
-  CommDKP.ConfigTab4.CombatLogging.text:SetFontObject("CommDKPSmall")
+  CommDKP.ConfigTab4.CombatLogging.Text:SetText("|cff5151de"..L["AUTOCOMBATLOG"].."|r");
+  CommDKP.ConfigTab4.CombatLogging.Text:SetFontObject("CommDKPSmall")
   CommDKP.ConfigTab4.CombatLogging:SetScript("OnEnter", function(self)
     GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
     GameTooltip:SetText(L["AUTOCOMBATLOG"], 0.25, 0.75, 0.90, 1, true)
@@ -1237,9 +1237,9 @@ function CommDKP:Options()
   CommDKP.ConfigTab4.AutoOpenCheckbox = CreateFrame("CheckButton", nil, CommDKP.ConfigTab4, "UICheckButtonTemplate");
   CommDKP.ConfigTab4.AutoOpenCheckbox:SetChecked(core.DB.defaults.AutoOpenBid)
   CommDKP.ConfigTab4.AutoOpenCheckbox:SetScale(0.8);
-  CommDKP.ConfigTab4.AutoOpenCheckbox.text:SetText("|cff5151de"..L["AUTOOPEN"].."|r");
-  CommDKP.ConfigTab4.AutoOpenCheckbox.text:SetScale(1);
-  CommDKP.ConfigTab4.AutoOpenCheckbox.text:SetFontObject("CommDKPSmallLeft")
+  CommDKP.ConfigTab4.AutoOpenCheckbox.Text:SetText("|cff5151de"..L["AUTOOPEN"].."|r");
+  CommDKP.ConfigTab4.AutoOpenCheckbox.Text:SetScale(1);
+  CommDKP.ConfigTab4.AutoOpenCheckbox.Text:SetFontObject("CommDKPSmallLeft")
   CommDKP.ConfigTab4.AutoOpenCheckbox:SetPoint("TOP", CommDKP.ConfigTab4.CombatLogging, "BOTTOM", 0, 0);
   CommDKP.ConfigTab4.AutoOpenCheckbox:SetScript("OnClick", function(self)
     core.DB.defaults.AutoOpenBid = self:GetChecked()
@@ -1258,9 +1258,9 @@ function CommDKP:Options()
     CommDKP.ConfigTab4.AutoAwardLootCheckbox = CreateFrame("CheckButton", nil, CommDKP.ConfigTab4, "UICheckButtonTemplate");
     CommDKP.ConfigTab4.AutoAwardLootCheckbox:SetChecked(core.DB.defaults.AutoAwardLoot)
     CommDKP.ConfigTab4.AutoAwardLootCheckbox:SetScale(0.8);
-    CommDKP.ConfigTab4.AutoAwardLootCheckbox.text:SetText("|cff5151de"..L["AUTOAWARDLOOT"].."|r");
-    CommDKP.ConfigTab4.AutoAwardLootCheckbox.text:SetScale(1);
-    CommDKP.ConfigTab4.AutoAwardLootCheckbox.text:SetFontObject("CommDKPSmallLeft")
+    CommDKP.ConfigTab4.AutoAwardLootCheckbox.Text:SetText("|cff5151de"..L["AUTOAWARDLOOT"].."|r");
+    CommDKP.ConfigTab4.AutoAwardLootCheckbox.Text:SetScale(1);
+    CommDKP.ConfigTab4.AutoAwardLootCheckbox.Text:SetFontObject("CommDKPSmallLeft")
     CommDKP.ConfigTab4.AutoAwardLootCheckbox:SetPoint("TOP", CommDKP.ConfigTab4.AutoOpenCheckbox, "BOTTOM", 0, 0);
     CommDKP.ConfigTab4.AutoAwardLootCheckbox:SetScript("OnClick", function(self)
       core.DB.defaults.AutoAwardLoot = self:GetChecked()
@@ -1285,8 +1285,8 @@ function CommDKP:Options()
     CommDKP.ConfigTab4.SuppressTells:SetPoint("LEFT", CommDKP.ConfigTab4.SuppressNotifications, "RIGHT", 200, 0)
     CommDKP.ConfigTab4.SuppressTells:SetChecked(core.DB.defaults.SuppressTells)
     CommDKP.ConfigTab4.SuppressTells:SetScale(0.8)
-    CommDKP.ConfigTab4.SuppressTells.text:SetText("|cff5151de"..L["SUPPRESSBIDWHISP"].."|r");
-    CommDKP.ConfigTab4.SuppressTells.text:SetFontObject("CommDKPSmall")
+    CommDKP.ConfigTab4.SuppressTells.Text:SetText("|cff5151de"..L["SUPPRESSBIDWHISP"].."|r");
+    CommDKP.ConfigTab4.SuppressTells.Text:SetFontObject("CommDKPSmall")
     CommDKP.ConfigTab4.SuppressTells:SetScript("OnEnter", function(self)
       GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
       GameTooltip:SetText(L["SUPPRESSBIDWHISP"], 0.25, 0.75, 0.90, 1, true)
@@ -1316,8 +1316,8 @@ function CommDKP:Options()
     CommDKP.ConfigTab4.DecreaseDisenchantCheckbox:SetPoint("LEFT", CommDKP.ConfigTab4.CombatLogging, "RIGHT", 200, 0)
     CommDKP.ConfigTab4.DecreaseDisenchantCheckbox:SetChecked(core.DB.defaults.DecreaseDisenchantValue)
     CommDKP.ConfigTab4.DecreaseDisenchantCheckbox:SetScale(0.8);
-    CommDKP.ConfigTab4.DecreaseDisenchantCheckbox.text:SetText("|cff5151de"..L["DECREASEDISENCHANT"].."|r");
-    CommDKP.ConfigTab4.DecreaseDisenchantCheckbox.text:SetFontObject("CommDKPSmall")
+    CommDKP.ConfigTab4.DecreaseDisenchantCheckbox.Text:SetText("|cff5151de"..L["DECREASEDISENCHANT"].."|r");
+    CommDKP.ConfigTab4.DecreaseDisenchantCheckbox.Text:SetFontObject("CommDKPSmall")
     CommDKP.ConfigTab4.DecreaseDisenchantCheckbox:SetScript("OnClick", function(self)
       core.DB.defaults.DecreaseDisenchantValue = self:GetChecked()
     end)
@@ -1392,7 +1392,7 @@ function CommDKP:Options()
     for i = 1, NUM_CHAT_WINDOWS do
       local name = GetChatWindowInfo(i)
       if name ~= "" then
-        SelectedFrame.text, SelectedFrame.arg1, SelectedFrame.checked = name, name, core.DB.defaults.ChatFrames[name]
+        SelectedFrame.Text, SelectedFrame.arg1, SelectedFrame.checked = name, name, core.DB.defaults.ChatFrames[name]
         LibDD:UIDropDownMenu_AddButton(SelectedFrame)
       end
     end

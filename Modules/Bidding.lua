@@ -1393,10 +1393,10 @@ function CommDKP:CreateBidWindow()
     f.CustomMinBid = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
     f.CustomMinBid:SetChecked(true)
     f.CustomMinBid:SetScale(0.6);
-    f.CustomMinBid.text:SetText("  |cff5151de"..L["CUSTOM"].."|r");
-    f.CustomMinBid.text:SetScale(1.5);
-    f.CustomMinBid.text:SetFontObject("CommDKPSmallLeft")
-    f.CustomMinBid.text:SetPoint("LEFT", f.CustomMinBid, "RIGHT", -10, 0)
+    f.CustomMinBid.Text:SetText("  |cff5151de"..L["CUSTOM"].."|r");
+    f.CustomMinBid.Text:SetScale(1.5);
+    f.CustomMinBid.Text:SetFontObject("CommDKPSmallLeft")
+    f.CustomMinBid.Text:SetPoint("LEFT", f.CustomMinBid, "RIGHT", -10, 0)
     f.CustomMinBid:Hide();
     f.CustomMinBid:SetScript("OnEnter", function(self)
       GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
@@ -1458,10 +1458,10 @@ function CommDKP:CreateBidWindow()
     f.CustomMaxBid = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
     f.CustomMaxBid:SetChecked(core.DB.defaults.CustomMaxBid)
     f.CustomMaxBid:SetScale(0.6);
-    f.CustomMaxBid.text:SetText("  |cff5151de"..L["CUSTOM"].."|r");
-    f.CustomMaxBid.text:SetScale(1.5);
-    f.CustomMaxBid.text:SetFontObject("CommDKPSmallLeft")
-    f.CustomMaxBid.text:SetPoint("LEFT", f.CustomMaxBid, "RIGHT", -10, 0)
+    f.CustomMaxBid.Text:SetText("  |cff5151de"..L["CUSTOM"].."|r");
+    f.CustomMaxBid.Text:SetScale(1.5);
+    f.CustomMaxBid.Text:SetFontObject("CommDKPSmallLeft")
+    f.CustomMaxBid.Text:SetPoint("LEFT", f.CustomMaxBid, "RIGHT", -10, 0)
     f.CustomMaxBid:Hide();
     f.CustomMaxBid:SetScript("OnEnter", function(self)
       GameTooltip:SetOwner(self, "ANCHOR_RIGHT");

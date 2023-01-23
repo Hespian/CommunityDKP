@@ -537,12 +537,12 @@ function CommDKP:CreateContainer(parent, name, header)
 	f.header:SetBackdropColor(0,0,0,1)
 	f.header:SetBackdropBorderColor(0,0,0,1)
 	f.header:SetPoint("LEFT", f, "TOPLEFT", 20, 0)
-	f.header.text = f.header:CreateFontString(nil, "OVERLAY")
-	f.header.text:SetFontObject("CommDKPSmallCenter");
-	f.header.text:SetPoint("CENTER", f.header, "CENTER", 0, 0);
-	f.header.text:SetText(header);
-	f.header:SetWidth(f.header.text:GetWidth() + 30)
-	f.header:SetHeight(f.header.text:GetHeight() + 4)
+	f.header.Text = f.header:CreateFontString(nil, "OVERLAY")
+	f.header.Text:SetFontObject("CommDKPSmallCenter");
+	f.header.Text:SetPoint("CENTER", f.header, "CENTER", 0, 0);
+	f.header.Text:SetText(header);
+	f.header:SetWidth(f.header.Text:GetWidth() + 30)
+	f.header:SetHeight(f.header.Text:GetHeight() + 4)
 
 	return f;
 end

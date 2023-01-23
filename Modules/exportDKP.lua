@@ -295,11 +295,11 @@ function CommDKP:ExportBox_Show(text)
 		local Format = LibDD:UIDropDownMenu_CreateInfo()
 			Format.func = self.SetValue
 			Format.fontObject = "CommDKPSmallCenter"
-			Format.text, Format.arg1, Format.checked, Format.isNotRadio = "HTML", "HTML", "HTML" == CurFormat, false
+			Format.Text, Format.arg1, Format.checked, Format.isNotRadio = "HTML", "HTML", "HTML" == CurFormat, false
 			LibDD:UIDropDownMenu_AddButton(Format)
-			Format.text, Format.arg1, Format.checked, Format.isNotRadio = "CSV", "CSV", "CSV" == CurFormat, false
+			Format.Text, Format.arg1, Format.checked, Format.isNotRadio = "CSV", "CSV", "CSV" == CurFormat, false
 			LibDD:UIDropDownMenu_AddButton(Format)
-			Format.text, Format.arg1, Format.checked, Format.isNotRadio = "XML", "XML", "XML" == CurFormat, false
+			Format.Text, Format.arg1, Format.checked, Format.isNotRadio = "XML", "XML", "XML" == CurFormat, false
 			LibDD:UIDropDownMenu_AddButton(Format)
 		end)
 
