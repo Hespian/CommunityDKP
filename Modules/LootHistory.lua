@@ -189,7 +189,7 @@ function CommDKP:CreateSortBox()
 			-- made it a bit more clear to read for now
 			-- add no filter button
 			dropDownMenuItem.func = self.FilterSetValue
-			dropDownMenuItem.Text = L["NOFILTER"]
+			dropDownMenuItem.text = L["NOFILTER"]
 			dropDownMenuItem.value = L["NOFILTER"]
 			dropDownMenuItem.arg1 = L["NOFILTER"]
 			dropDownMenuItem.arg2 = L["NOFILTER"]
@@ -198,7 +198,7 @@ function CommDKP:CreateSortBox()
 			LibDD:UIDropDownMenu_AddButton(dropDownMenuItem, level)
 
 			-- add deleted entries button
-			dropDownMenuItem.Text = L["DELETEDENTRY"] 
+			dropDownMenuItem.text = L["DELETEDENTRY"] 
 			dropDownMenuItem.value = L["DELETEDENTRY"] 
 			dropDownMenuItem.arg1 = L["DELETEDENTRY"] 
 			dropDownMenuItem.arg2 = L["DELETEDENTRY"]
@@ -209,14 +209,14 @@ function CommDKP:CreateSortBox()
 
 			-- add separator
 			--wipe(dropDownMenuItem)
-			dropDownMenuItem.Text = ""
+			dropDownMenuItem.text = ""
 			dropDownMenuItem.disabled = 1
 			dropDownMenuItem.isNotRadio = true
 			LibDD:UIDropDownMenu_AddButton(dropDownMenuItem, level)
 			dropDownMenuItem.disabled = nil
 		
 			-- add players section
-			dropDownMenuItem.Text =  L["PLAYERS"] 
+			dropDownMenuItem.text =  L["PLAYERS"] 
 			dropDownMenuItem.value =  L["PLAYERS"] 
 			dropDownMenuItem.arg1 = L["PLAYERS"] 
 			dropDownMenuItem.arg2 = L["PLAYERS"]
@@ -227,7 +227,7 @@ function CommDKP:CreateSortBox()
 			LibDD:UIDropDownMenu_AddButton(dropDownMenuItem, level)
 
 			-- add items section
-			dropDownMenuItem.Text =  L["ITEMS"] 
+			dropDownMenuItem.text =  L["ITEMS"] 
 			dropDownMenuItem.value =  L["ITEMS"] 
 			dropDownMenuItem.arg1 = L["ITEMS"] 
 			dropDownMenuItem.arg2 = L["ITEMS"]
@@ -244,7 +244,7 @@ function CommDKP:CreateSortBox()
 				for i=1, ceil(#PlayerList/displayLimit) do 
 					local max = i*displayLimit;
 					if max > #PlayerList then max = #PlayerList end
-					dropDownMenuItem.Text = strsub(PlayerList[((i*displayLimit)-(displayLimit-1))], 1, 1).."-"..strsub(PlayerList[max], 1, 1) 
+					dropDownMenuItem.text = strsub(PlayerList[((i*displayLimit)-(displayLimit-1))], 1, 1).."-"..strsub(PlayerList[max], 1, 1) 
 					dropDownMenuItem.checked = curSelected >= (i*displayLimit)-(displayLimit-1) and curSelected <= i*displayLimit
 					dropDownMenuItem.menuList = i -- to know which subLevel of players we are on
 					dropDownMenuItem.value = L["PLAYERS"] -- for submenu handling in level 3
@@ -259,8 +259,8 @@ function CommDKP:CreateSortBox()
 				for i=1, ceil(#ItemList/displayLimit) do 
 					local max = i*displayLimit;
 					if max > #ItemList then max = #ItemList end
-					dropDownMenuItem.Text = ItemList[((i*displayLimit)-(displayLimit-1))]
-					dropDownMenuItem.Text = strsub(ItemList[((i*displayLimit)-(displayLimit-1))], strfind(ItemList[((i*displayLimit)-(displayLimit-1))], "%[", 1) + 1, strfind(ItemList[((i*displayLimit)-(displayLimit-1))], "%[", 1) + 1).."-"..strsub(ItemList[max], strfind(ItemList[max], "%[", 1) + 1, strfind(ItemList[max], "%[", 1) + 1)
+					dropDownMenuItem.text = ItemList[((i*displayLimit)-(displayLimit-1))]
+					dropDownMenuItem.text = strsub(ItemList[((i*displayLimit)-(displayLimit-1))], strfind(ItemList[((i*displayLimit)-(displayLimit-1))], "%[", 1) + 1, strfind(ItemList[((i*displayLimit)-(displayLimit-1))], "%[", 1) + 1).."-"..strsub(ItemList[max], strfind(ItemList[max], "%[", 1) + 1, strfind(ItemList[max], "%[", 1) + 1)
 					dropDownMenuItem.menuList = i -- to know which subLevel of items we are on
 					dropDownMenuItem.value = L["ITEMS"] -- for submenu handling in level 3
 					dropDownMenuItem.hasArrow = true
@@ -292,7 +292,7 @@ function CommDKP:CreateSortBox()
 						else
 							c = { hex="ff444444" }
 						end
-						dropDownMenuItem.Text = "|c"..c.hex..PlayerList[i].."|r" 
+						dropDownMenuItem.text = "|c"..c.hex..PlayerList[i].."|r" 
 						dropDownMenuItem.value = "|c"..c.hex..PlayerList[i].."|r" 
 						dropDownMenuItem.arg1 = PlayerList[i]
 						dropDownMenuItem.arg2 = L["PLAYERS"]
@@ -307,7 +307,7 @@ function CommDKP:CreateSortBox()
 
 				for  i=1+(menuList-1)*displayLimit, 1+(menuList-1)*displayLimit+(displayLimit-1) do
 					if ItemList[i] then
-						dropDownMenuItem.Text = ItemList[i]
+						dropDownMenuItem.text = ItemList[i]
 						dropDownMenuItem.value = ItemList[i]
 						dropDownMenuItem.arg1 = ItemList[i]
 						dropDownMenuItem.arg2 = L["ITEMS"]

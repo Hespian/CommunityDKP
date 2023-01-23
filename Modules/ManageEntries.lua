@@ -673,7 +673,7 @@ function CommDKP:ManageEntries()
 					local rankList = CommDKP:GetGuildRankList()
 
 					for i=1, #rankList do
-						rank.Text, rank.arg1, rank.arg2, rank.checked, rank.isNotRadio = rankList[i].name, rankList[i].name, rankList[i].index, rankList[i].name == curRank, true
+						rank.text, rank.arg1, rank.arg2, rank.checked, rank.isNotRadio = rankList[i].name, rankList[i].name, rankList[i].index, rankList[i].name == curRank, true
 						LibDD:UIDropDownMenu_AddButton(rank)
 					end
 			end
@@ -1049,7 +1049,7 @@ function CommDKP:ManageEntries()
 					teamList = CommDKP:GetGuildTeamList()
 
 					for i=1, #teamList do
-						dropDownMenuItem.Text = teamList[i][2]
+						dropDownMenuItem.text = teamList[i][2]
 						dropDownMenuItem.arg1 = teamList[i][2]
 						dropDownMenuItem.arg2 = teamList[i][1]
 						dropDownMenuItem.checked = teamList[i][1] == selectedTeamIndex

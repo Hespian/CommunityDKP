@@ -720,7 +720,7 @@ end
 --[[
 List of button attributes
 ======================================================
-info.Text = [STRING]  --  The text of the button
+info.text = [STRING]  --  The text of the button
 info.value = [ANYTHING]  --  The value that L_UIDROPDOWNMENU_MENU_VALUE is set to when the button is clicked
 info.func = [function()]  --  The function that is called when you click the button
 info.checked = [nil, true, function]  --  Check the button if true or function returns true
@@ -904,12 +904,12 @@ function lib:UIDropDownMenu_AddButton(info, level)
 	end
 
 	-- Configure button
-	if ( info.Text ) then
+	if ( info.text ) then
 		-- look for inline color code this is only if the button is enabled
 		if ( info.colorCode ) then
-			button:SetText(info.colorCode..info.Text.."|r");
+			button:SetText(info.colorCode..info.text.."|r");
 		else
-			button:SetText(info.Text);
+			button:SetText(info.text);
 		end
 
 		-- Set icon
@@ -993,8 +993,8 @@ function lib:UIDropDownMenu_AddButton(info, level)
 
 	if ( info.value ) then
 		button.value = info.value;
-	elseif ( info.Text ) then
-		button.value = info.Text;
+	elseif ( info.text ) then
+		button.value = info.text;
 	else
 		button.value = nil;
 	end
@@ -1791,7 +1791,7 @@ end
 function lib:UIDropDownMenu_SetButtonText(level, id, text, colorCode)
 	local button = _G["L_DropDownList"..level.."Button"..id];
 	if ( colorCode) then
-		button:SetText(colorCode..Text.."|r");
+		button:SetText(colorCode..text.."|r");
 	else
 		button:SetText(text);
 	end
@@ -2005,7 +2005,7 @@ end
 local function easyMenu_Initialize( frame, level, menuList )
 	for index = 1, #menuList do
 		local value = menuList[index]
-		if (value.Text) then
+		if (value.text) then
 			value.index = index;
 			lib:UIDropDownMenu_AddButton( value, level );
 		end

@@ -793,11 +793,11 @@ function CommDKP:BidInterface_Create()
   f.AutoOpenCheckbox = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
   f.AutoOpenCheckbox:SetChecked(core.DB.defaults.AutoOpenBid)
   f.AutoOpenCheckbox:SetScale(0.6);
-  f.AutoOpenCheckbox.Text:SetText("|cff5151de"..L["AUTOOPEN"].."|r");
-  f.AutoOpenCheckbox.Text:SetScale(1.4);
-  f.AutoOpenCheckbox.Text:ClearAllPoints()
-  f.AutoOpenCheckbox.Text:SetPoint("RIGHT", f.AutoOpenCheckbox, "LEFT", -2, 0)
-  f.AutoOpenCheckbox.Text:SetFontObject("CommDKPSmallLeft")
+  f.AutoOpenCheckbox.text:SetText("|cff5151de"..L["AUTOOPEN"].."|r");
+  f.AutoOpenCheckbox.text:SetScale(1.4);
+  f.AutoOpenCheckbox.text:ClearAllPoints()
+  f.AutoOpenCheckbox.text:SetPoint("RIGHT", f.AutoOpenCheckbox, "LEFT", -2, 0)
+  f.AutoOpenCheckbox.text:SetFontObject("CommDKPSmallLeft")
   f.AutoOpenCheckbox:SetPoint("TOP", f.CancelBid, "BOTTOMRIGHT", 5, -53)
   f.AutoOpenCheckbox:SetScript("OnClick", function(self)
     core.DB.defaults.AutoOpenBid = self:GetChecked()

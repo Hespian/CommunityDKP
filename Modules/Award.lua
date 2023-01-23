@@ -518,7 +518,7 @@ function CommDKP:AwardConfirm(player, cost, boss, zone, loot, reassign)
 
 				for i=1, #teamList do
 					dropDownMenuItem.disabled = true
-					dropDownMenuItem.Text = teamList[i][2]
+					dropDownMenuItem.text = teamList[i][2]
 					dropDownMenuItem.arg1 = teamList[i][2] -- name
 					dropDownMenuItem.arg2 = teamList[i][1] -- index
 					dropDownMenuItem.checked = teamList[i][1] == tonumber(CommDKP:GetCurrentTeamIndex())
@@ -552,7 +552,7 @@ function CommDKP:AwardConfirm(player, cost, boss, zone, loot, reassign)
 			for i=1, numSubs do
 				local max = i*20;
 				if max > #PlayerList then max = #PlayerList end
-				filterName.Text, filterName.checked, filterName.menuList, filterName.hasArrow = strsub(PlayerList[((i*20)-19)], 1, 1).."-"..strsub(PlayerList[max], 1, 1), curSelected >= (i*20)-19 and curSelected <= i*20, i, true
+				filterName.text, filterName.checked, filterName.menuList, filterName.hasArrow = strsub(PlayerList[((i*20)-19)], 1, 1).."-"..strsub(PlayerList[max], 1, 1), curSelected >= (i*20)-19 and curSelected <= i*20, i, true
 				LibDD:UIDropDownMenu_AddButton(filterName)
 			end
 			
@@ -568,7 +568,7 @@ function CommDKP:AwardConfirm(player, cost, boss, zone, loot, reassign)
 				    else
 				     	c = { hex="ff444444" }
 				    end
-					filterName.Text, filterName.arg1, filterName.arg2, filterName.checked, filterName.isNotRadio = "|c"..c.hex..PlayerList[i].."|r", PlayerList[i], "|c"..c.hex..PlayerList[i].."|r", PlayerList[i] == player, true
+					filterName.text, filterName.arg1, filterName.arg2, filterName.checked, filterName.isNotRadio = "|c"..c.hex..PlayerList[i].."|r", PlayerList[i], "|c"..c.hex..PlayerList[i].."|r", PlayerList[i] == player, true
 					LibDD:UIDropDownMenu_AddButton(filterName, level)
 				end
 			end
@@ -594,12 +594,12 @@ function CommDKP:AwardConfirm(player, cost, boss, zone, loot, reassign)
 		reason.func = self.SetValue
 
 		if not CommDKP:Table_Search(tempNPCs, curBoss) then
-			reason.Text, reason.arg1, reason.checked, reason.isNotRadio = curBoss, curBoss, curBoss == curBoss, true
+			reason.text, reason.arg1, reason.checked, reason.isNotRadio = curBoss, curBoss, curBoss == curBoss, true
 			LibDD:UIDropDownMenu_AddButton(reason)
 		end
 
 		for i=1, #tempNPCs do
-			reason.Text, reason.arg1, reason.checked, reason.isNotRadio = tempNPCs[i], tempNPCs[i], tempNPCs[i] == curBoss, true
+			reason.text, reason.arg1, reason.checked, reason.isNotRadio = tempNPCs[i], tempNPCs[i], tempNPCs[i] == curBoss, true
 			LibDD:UIDropDownMenu_AddButton(reason)
 		end
 	end)
@@ -623,7 +623,7 @@ function CommDKP:AwardConfirm(player, cost, boss, zone, loot, reassign)
 		reason.func = self.SetValue
 
 		for i=1, #tempZones do
-			reason.Text, reason.arg1, reason.checked, reason.isNotRadio = tempZones[i], tempZones[i], tempZones[i] == curZone, true
+			reason.text, reason.arg1, reason.checked, reason.isNotRadio = tempZones[i], tempZones[i], tempZones[i] == curZone, true
 			LibDD:UIDropDownMenu_AddButton(reason)
 		end
 	end)

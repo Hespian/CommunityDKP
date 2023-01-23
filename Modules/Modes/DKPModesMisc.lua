@@ -15,9 +15,9 @@ function CommDKP:DKPModes_Misc()
 		f.AutoAwardContainer.AutoAward = CreateFrame("CheckButton", nil, f.AutoAwardContainer, "UICheckButtonTemplate");
 		f.AutoAwardContainer.AutoAward:SetChecked(core.DB.modes.AutoAward)
 		f.AutoAwardContainer.AutoAward:SetScale(0.6);
-		f.AutoAwardContainer.AutoAward.Text:SetText("  |cff5151de"..L["AUTOAWARD"].."|r");
-		f.AutoAwardContainer.AutoAward.Text:SetScale(1.5);
-		f.AutoAwardContainer.AutoAward.Text:SetFontObject("CommDKPSmallLeft")
+		f.AutoAwardContainer.AutoAward.text:SetText("  |cff5151de"..L["AUTOAWARD"].."|r");
+		f.AutoAwardContainer.AutoAward.text:SetScale(1.5);
+		f.AutoAwardContainer.AutoAward.text:SetFontObject("CommDKPSmallLeft")
 		f.AutoAwardContainer.AutoAward:SetPoint("TOPLEFT", f.AutoAwardContainer, "TOPLEFT", 10, -10);
 		f.AutoAwardContainer.AutoAward:SetScript("OnClick", function(self)
 			core.DB.modes.AutoAward = self:GetChecked();
@@ -41,9 +41,9 @@ function CommDKP:DKPModes_Misc()
 		f.AutoAwardContainer.IncStandby = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 		f.AutoAwardContainer.IncStandby:SetChecked(core.DB.DKPBonus.AutoIncStandby)
 		f.AutoAwardContainer.IncStandby:SetScale(0.6);
-		f.AutoAwardContainer.IncStandby.Text:SetText("  |cff5151de"..L["INCLUDESTANDBY"].."|r");
-		f.AutoAwardContainer.IncStandby.Text:SetScale(1.5);
-		f.AutoAwardContainer.IncStandby.Text:SetFontObject("CommDKPSmallLeft")
+		f.AutoAwardContainer.IncStandby.text:SetText("  |cff5151de"..L["INCLUDESTANDBY"].."|r");
+		f.AutoAwardContainer.IncStandby.text:SetScale(1.5);
+		f.AutoAwardContainer.IncStandby.text:SetFontObject("CommDKPSmallLeft")
 		f.AutoAwardContainer.IncStandby:SetPoint("TOP", f.AutoAwardContainer.AutoAward, "BOTTOM", 0, 0);
 		f.AutoAwardContainer.IncStandby:SetScript("OnClick", function(self)
 			core.DB.DKPBonus.AutoIncStandby = self:GetChecked();
@@ -73,9 +73,9 @@ function CommDKP:DKPModes_Misc()
 		f.AnnounceBidContainer.AnnounceBid = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 		f.AnnounceBidContainer.AnnounceBid:SetChecked(core.DB.modes.AnnounceBid)
 		f.AnnounceBidContainer.AnnounceBid:SetScale(0.6);
-		f.AnnounceBidContainer.AnnounceBid.Text:SetText("  |cff5151de"..L["ANNOUNCEBID"].."|r");
-		f.AnnounceBidContainer.AnnounceBid.Text:SetScale(1.5);
-		f.AnnounceBidContainer.AnnounceBid.Text:SetFontObject("CommDKPSmallLeft")
+		f.AnnounceBidContainer.AnnounceBid.text:SetText("  |cff5151de"..L["ANNOUNCEBID"].."|r");
+		f.AnnounceBidContainer.AnnounceBid.text:SetScale(1.5);
+		f.AnnounceBidContainer.AnnounceBid.text:SetFontObject("CommDKPSmallLeft")
 		f.AnnounceBidContainer.AnnounceBid:SetPoint("TOPLEFT", f.AnnounceBidContainer, "TOPLEFT", 10, -10);
 		f.AnnounceBidContainer.AnnounceBid:SetScript("OnClick", function(self)
 			core.DB.modes.AnnounceBid = self:GetChecked();
@@ -99,9 +99,9 @@ function CommDKP:DKPModes_Misc()
 		f.AnnounceBidContainer.AnnounceBidName = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 		f.AnnounceBidContainer.AnnounceBidName:SetChecked(core.DB.modes.AnnounceBidName)
 		f.AnnounceBidContainer.AnnounceBidName:SetScale(0.6);
-		f.AnnounceBidContainer.AnnounceBidName.Text:SetText("  |cff5151de"..L["INCLUDENAME"].."|r");
-		f.AnnounceBidContainer.AnnounceBidName.Text:SetScale(1.5);
-		f.AnnounceBidContainer.AnnounceBidName.Text:SetFontObject("CommDKPSmallLeft")
+		f.AnnounceBidContainer.AnnounceBidName.text:SetText("  |cff5151de"..L["INCLUDENAME"].."|r");
+		f.AnnounceBidContainer.AnnounceBidName.text:SetScale(1.5);
+		f.AnnounceBidContainer.AnnounceBidName.text:SetFontObject("CommDKPSmallLeft")
 		f.AnnounceBidContainer.AnnounceBidName:SetPoint("TOP", f.AnnounceBidContainer.AnnounceBid, "BOTTOM", 0, 0);
 		f.AnnounceBidContainer.AnnounceBidName:SetScript("OnClick", function(self)
 			core.DB.modes.AnnounceBidName = self:GetChecked();
@@ -125,9 +125,9 @@ function CommDKP:DKPModes_Misc()
 		f.AnnounceBidContainer.AnnounceRaidWarning = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 		f.AnnounceBidContainer.AnnounceRaidWarning:SetChecked(core.DB.modes.AnnounceRaidWarning)
 		f.AnnounceBidContainer.AnnounceRaidWarning:SetScale(0.6);
-		f.AnnounceBidContainer.AnnounceRaidWarning.Text:SetText("  |cff5151de"..L["ANNOUNCEINRAIDWARNING"].."|r");  -- Translate/Localize
-		f.AnnounceBidContainer.AnnounceRaidWarning.Text:SetScale(1.5);
-		f.AnnounceBidContainer.AnnounceRaidWarning.Text:SetFontObject("CommDKPSmallLeft")
+		f.AnnounceBidContainer.AnnounceRaidWarning.text:SetText("  |cff5151de"..L["ANNOUNCEINRAIDWARNING"].."|r");  -- Translate/Localize
+		f.AnnounceBidContainer.AnnounceRaidWarning.text:SetScale(1.5);
+		f.AnnounceBidContainer.AnnounceRaidWarning.text:SetFontObject("CommDKPSmallLeft")
 		f.AnnounceBidContainer.AnnounceRaidWarning:SetPoint("TOP", f.AnnounceBidContainer.AnnounceBidName, "BOTTOM", 0, 0);
 		f.AnnounceBidContainer.AnnounceRaidWarning:SetScript("OnClick", function(self)
 			core.DB.modes.AnnounceRaidWarning = self:GetChecked();
@@ -147,9 +147,9 @@ function CommDKP:DKPModes_Misc()
 		f.AnnounceBidContainer.DeclineLowerBids = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 		f.AnnounceBidContainer.DeclineLowerBids:SetChecked(core.DB.modes.DeclineLowerBids)
 		f.AnnounceBidContainer.DeclineLowerBids:SetScale(0.6);
-		f.AnnounceBidContainer.DeclineLowerBids.Text:SetText("  |cff5151de"..L["DECLINELOWBIDS"].."|r");
-		f.AnnounceBidContainer.DeclineLowerBids.Text:SetScale(1.5);
-		f.AnnounceBidContainer.DeclineLowerBids.Text:SetFontObject("CommDKPSmallLeft")
+		f.AnnounceBidContainer.DeclineLowerBids.text:SetText("  |cff5151de"..L["DECLINELOWBIDS"].."|r");
+		f.AnnounceBidContainer.DeclineLowerBids.text:SetScale(1.5);
+		f.AnnounceBidContainer.DeclineLowerBids.text:SetFontObject("CommDKPSmallLeft")
 		f.AnnounceBidContainer.DeclineLowerBids:SetPoint("TOP", f.AnnounceBidContainer.AnnounceRaidWarning, "BOTTOM", 0, 0);
 		f.AnnounceBidContainer.DeclineLowerBids:SetScript("OnClick", function(self)
 			core.DB.modes.DeclineLowerBids = self:GetChecked();
@@ -173,9 +173,9 @@ function CommDKP:DKPModes_Misc()
 		f.MiscContainer.Standby = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 		f.MiscContainer.Standby:SetChecked(core.DB.modes.StandbyOptIn)
 		f.MiscContainer.Standby:SetScale(0.6);
-		f.MiscContainer.Standby.Text:SetText("  |cff5151de"..L["STANDBYOPTIN"].."|r");
-		f.MiscContainer.Standby.Text:SetScale(1.5);
-		f.MiscContainer.Standby.Text:SetFontObject("CommDKPSmallLeft")
+		f.MiscContainer.Standby.text:SetText("  |cff5151de"..L["STANDBYOPTIN"].."|r");
+		f.MiscContainer.Standby.text:SetScale(1.5);
+		f.MiscContainer.Standby.text:SetFontObject("CommDKPSmallLeft")
 		f.MiscContainer.Standby:SetPoint("TOPLEFT", f.MiscContainer, "TOPLEFT", 10, -10);
 		f.MiscContainer.Standby:SetScript("OnClick", function(self)
 			core.DB.modes.StandbyOptIn = self:GetChecked();
@@ -196,9 +196,9 @@ function CommDKP:DKPModes_Misc()
 		f.MiscContainer.AnnounceAward = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 		f.MiscContainer.AnnounceAward:SetChecked(core.DB.modes.AnnounceAward)
 		f.MiscContainer.AnnounceAward:SetScale(0.6);
-		f.MiscContainer.AnnounceAward.Text:SetText("  |cff5151de"..L["ANNOUNCEAWARD"].."|r");
-		f.MiscContainer.AnnounceAward.Text:SetScale(1.5);
-		f.MiscContainer.AnnounceAward.Text:SetFontObject("CommDKPSmallLeft")
+		f.MiscContainer.AnnounceAward.text:SetText("  |cff5151de"..L["ANNOUNCEAWARD"].."|r");
+		f.MiscContainer.AnnounceAward.text:SetScale(1.5);
+		f.MiscContainer.AnnounceAward.text:SetFontObject("CommDKPSmallLeft")
 		f.MiscContainer.AnnounceAward:SetPoint("TOP", f.MiscContainer.Standby, "BOTTOM", 0, 0);
 		f.MiscContainer.AnnounceAward:SetScript("OnClick", function(self)
 			core.DB.modes.AnnounceAward = self:GetChecked();
@@ -218,9 +218,9 @@ function CommDKP:DKPModes_Misc()
 		f.MiscContainer.BroadcastBids = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 		f.MiscContainer.BroadcastBids:SetChecked(core.DB.modes.BroadcastBids)
 		f.MiscContainer.BroadcastBids:SetScale(0.6);
-		f.MiscContainer.BroadcastBids.Text:SetText("  |cff5151de"..L["BROADCASTBIDS"].."|r");
-		f.MiscContainer.BroadcastBids.Text:SetScale(1.5);
-		f.MiscContainer.BroadcastBids.Text:SetFontObject("CommDKPSmallLeft")
+		f.MiscContainer.BroadcastBids.text:SetText("  |cff5151de"..L["BROADCASTBIDS"].."|r");
+		f.MiscContainer.BroadcastBids.text:SetScale(1.5);
+		f.MiscContainer.BroadcastBids.text:SetFontObject("CommDKPSmallLeft")
 		f.MiscContainer.BroadcastBids:SetPoint("TOP", f.MiscContainer.AnnounceAward, "BOTTOM", 0, 0);
 		f.MiscContainer.BroadcastBids:SetScript("OnClick", function(self)
 			core.DB.modes.BroadcastBids = self:GetChecked();
@@ -240,9 +240,9 @@ function CommDKP:DKPModes_Misc()
 		f.MiscContainer.StoreBids = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 		f.MiscContainer.StoreBids:SetChecked(core.DB.modes.StoreBids)
 		f.MiscContainer.StoreBids:SetScale(0.6);
-		f.MiscContainer.StoreBids.Text:SetText("  |cff5151de"..L["LOGBIDS"].."|r");
-		f.MiscContainer.StoreBids.Text:SetScale(1.5);
-		f.MiscContainer.StoreBids.Text:SetFontObject("CommDKPSmallLeft")
+		f.MiscContainer.StoreBids.text:SetText("  |cff5151de"..L["LOGBIDS"].."|r");
+		f.MiscContainer.StoreBids.text:SetScale(1.5);
+		f.MiscContainer.StoreBids.text:SetFontObject("CommDKPSmallLeft")
 		f.MiscContainer.StoreBids:SetPoint("TOP", f.MiscContainer.BroadcastBids, "BOTTOM", 0, 0);
 		f.MiscContainer.StoreBids:SetScript("OnClick", function(self)
 			core.DB.modes.StoreBids = self:GetChecked();
@@ -268,9 +268,9 @@ function CommDKP:DKPModes_Misc()
 		f.DKPAwardContainer.OnlineOnly = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 		f.DKPAwardContainer.OnlineOnly:SetChecked(core.DB.modes.OnlineOnly)
 		f.DKPAwardContainer.OnlineOnly:SetScale(0.6);
-		f.DKPAwardContainer.OnlineOnly.Text:SetText("  |cff5151de"..L["ONLINEONLY"].."|r");
-		f.DKPAwardContainer.OnlineOnly.Text:SetScale(1.5);
-		f.DKPAwardContainer.OnlineOnly.Text:SetFontObject("CommDKPSmallLeft")
+		f.DKPAwardContainer.OnlineOnly.text:SetText("  |cff5151de"..L["ONLINEONLY"].."|r");
+		f.DKPAwardContainer.OnlineOnly.text:SetScale(1.5);
+		f.DKPAwardContainer.OnlineOnly.text:SetFontObject("CommDKPSmallLeft")
 		f.DKPAwardContainer.OnlineOnly:SetPoint("TOPLEFT", f.DKPAwardContainer, "TOPLEFT", 10, -10);
 		f.DKPAwardContainer.OnlineOnly:SetScript("OnClick", function(self)
 			core.DB.modes.OnlineOnly = self:GetChecked();
@@ -291,9 +291,9 @@ function CommDKP:DKPModes_Misc()
 		f.DKPAwardContainer.SameZoneOnly = CreateFrame("CheckButton", nil, f, "UICheckButtonTemplate");
 		f.DKPAwardContainer.SameZoneOnly:SetChecked(core.DB.modes.SameZoneOnly)
 		f.DKPAwardContainer.SameZoneOnly:SetScale(0.6);
-		f.DKPAwardContainer.SameZoneOnly.Text:SetText("  |cff5151de"..L["INZONEONLY"].."|r");
-		f.DKPAwardContainer.SameZoneOnly.Text:SetScale(1.5);
-		f.DKPAwardContainer.SameZoneOnly.Text:SetFontObject("CommDKPSmallLeft")
+		f.DKPAwardContainer.SameZoneOnly.text:SetText("  |cff5151de"..L["INZONEONLY"].."|r");
+		f.DKPAwardContainer.SameZoneOnly.text:SetScale(1.5);
+		f.DKPAwardContainer.SameZoneOnly.text:SetFontObject("CommDKPSmallLeft")
 		f.DKPAwardContainer.SameZoneOnly:SetPoint("TOP", f.DKPAwardContainer.OnlineOnly, "BOTTOM", 0, 0);
 		f.DKPAwardContainer.SameZoneOnly:SetScript("OnClick", function(self)
 			core.DB.modes.SameZoneOnly = self:GetChecked();

@@ -187,7 +187,7 @@ function CommDKP_BroadcastFull_Init()
 			for i=1, numSubs do
 				local max = i*20;
 				if max > #PlayerList then max = #PlayerList end
-				filterName.Text, filterName.checked, filterName.menuList, filterName.hasArrow = strsub(PlayerList[((i*20)-19)].player, 1, 1).."-"..strsub(PlayerList[max].player, 1, 1), curSelected >= (i*20)-19 and curSelected <= i*20, i, true
+				filterName.text, filterName.checked, filterName.menuList, filterName.hasArrow = strsub(PlayerList[((i*20)-19)].player, 1, 1).."-"..strsub(PlayerList[max].player, 1, 1), curSelected >= (i*20)-19 and curSelected <= i*20, i, true
 				LibDD:UIDropDownMenu_AddButton(filterName)
 			end
 			
@@ -197,7 +197,7 @@ function CommDKP_BroadcastFull_Init()
 				if PlayerList[i] then
 					local c = CommDKP:GetCColors(PlayerList[i].class)
 
-					filterName.Text, filterName.arg1, filterName.arg2, filterName.checked, filterName.isNotRadio = "|c"..c.hex..PlayerList[i].player.."|r", PlayerList[i].player, "|c"..c.hex..PlayerList[i].player.."|r", PlayerList[i].player == player, true
+					filterName.text, filterName.arg1, filterName.arg2, filterName.checked, filterName.isNotRadio = "|c"..c.hex..PlayerList[i].player.."|r", PlayerList[i].player, "|c"..c.hex..PlayerList[i].player.."|r", PlayerList[i].player == player, true
 					LibDD:UIDropDownMenu_AddButton(filterName, level)
 				end
 			end

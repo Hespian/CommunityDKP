@@ -61,13 +61,13 @@ function CommDKP:DKPModes_Main()
   local DKPMode = LibDD:UIDropDownMenu_CreateInfo()
     DKPMode.func = self.SetValue
     DKPMode.fontObject = "CommDKPSmallCenter"
-    DKPMode.Text, DKPMode.arg1, DKPMode.checked, DKPMode.isNotRadio = L["MINBIDVALUESHEAD"], "Minimum Bid Values", "Minimum Bid Values" == CurMode, false
+    DKPMode.text, DKPMode.arg1, DKPMode.checked, DKPMode.isNotRadio = L["MINBIDVALUESHEAD"], "Minimum Bid Values", "Minimum Bid Values" == CurMode, false
     LibDD:UIDropDownMenu_AddButton(DKPMode)
-    DKPMode.Text, DKPMode.arg1, DKPMode.checked, DKPMode.isNotRadio = L["STATICITEMVALUESHEAD"], "Static Item Values", "Static Item Values" == CurMode, false
+    DKPMode.text, DKPMode.arg1, DKPMode.checked, DKPMode.isNotRadio = L["STATICITEMVALUESHEAD"], "Static Item Values", "Static Item Values" == CurMode, false
     LibDD:UIDropDownMenu_AddButton(DKPMode)
-    DKPMode.Text, DKPMode.arg1, DKPMode.checked, DKPMode.isNotRadio = L["ROLLBIDDINGHEAD"], "Roll Based Bidding", "Roll Based Bidding" == CurMode, false
+    DKPMode.text, DKPMode.arg1, DKPMode.checked, DKPMode.isNotRadio = L["ROLLBIDDINGHEAD"], "Roll Based Bidding", "Roll Based Bidding" == CurMode, false
     LibDD:UIDropDownMenu_AddButton(DKPMode)
-    DKPMode.Text, DKPMode.arg1, DKPMode.checked, DKPMode.isNotRadio = L["ZEROSUMHEAD"], "Zero Sum", "Zero Sum" == CurMode, false
+    DKPMode.text, DKPMode.arg1, DKPMode.checked, DKPMode.isNotRadio = L["ZEROSUMHEAD"], "Zero Sum", "Zero Sum" == CurMode, false
     LibDD:UIDropDownMenu_AddButton(DKPMode)
   end)
 
@@ -231,15 +231,15 @@ function CommDKP:DKPModes_Main()
   local places = LibDD:UIDropDownMenu_CreateInfo()
     places.func = self.SetValue
     places.fontObject = "CommDKPSmallCenter"
-    places.Text, places.arg1, places.checked, places.isNotRadio = 0, 0, 0 == core.DB.modes.rounding, false
+    places.text, places.arg1, places.checked, places.isNotRadio = 0, 0, 0 == core.DB.modes.rounding, false
     LibDD:UIDropDownMenu_AddButton(places)
-    places.Text, places.arg1, places.checked, places.isNotRadio = 1, 1, 1 == core.DB.modes.rounding, false
+    places.text, places.arg1, places.checked, places.isNotRadio = 1, 1, 1 == core.DB.modes.rounding, false
     LibDD:UIDropDownMenu_AddButton(places)
-    places.Text, places.arg1, places.checked, places.isNotRadio = 2, 2, 2 == core.DB.modes.rounding, false
+    places.text, places.arg1, places.checked, places.isNotRadio = 2, 2, 2 == core.DB.modes.rounding, false
     LibDD:UIDropDownMenu_AddButton(places)
-    places.Text, places.arg1, places.checked, places.isNotRadio = 3, 3, 3 == core.DB.modes.rounding, false
+    places.text, places.arg1, places.checked, places.isNotRadio = 3, 3, 3 == core.DB.modes.rounding, false
     LibDD:UIDropDownMenu_AddButton(places)
-    places.Text, places.arg1, places.checked, places.isNotRadio = 4, 4, 4 == core.DB.modes.rounding, false
+    places.text, places.arg1, places.checked, places.isNotRadio = 4, 4, 4 == core.DB.modes.rounding, false
     LibDD:UIDropDownMenu_AddButton(places)
   end)
 
@@ -282,11 +282,11 @@ function CommDKP:DKPModes_Main()
   local MaxBehavior = LibDD:UIDropDownMenu_CreateInfo()
     MaxBehavior.func = self.SetValue
     MaxBehavior.fontObject = "CommDKPSmallCenter"
-    MaxBehavior.Text, MaxBehavior.arg1, MaxBehavior.checked, MaxBehavior.isNotRadio = L["MAXBIDBEHAVIORMAXDKP"], "Max DKP", "Max DKP" == core.DB.modes.MaxBehavior, false
+    MaxBehavior.text, MaxBehavior.arg1, MaxBehavior.checked, MaxBehavior.isNotRadio = L["MAXBIDBEHAVIORMAXDKP"], "Max DKP", "Max DKP" == core.DB.modes.MaxBehavior, false
     LibDD:UIDropDownMenu_AddButton(MaxBehavior)
-    MaxBehavior.Text, MaxBehavior.arg1, MaxBehavior.checked, MaxBehavior.isNotRadio = L["MAXBIDBEHAVIORMAXITEMVALUE"], "Max Item Value", "Max Item Value" == core.DB.modes.MaxBehavior, false
+    MaxBehavior.text, MaxBehavior.arg1, MaxBehavior.checked, MaxBehavior.isNotRadio = L["MAXBIDBEHAVIORMAXITEMVALUE"], "Max Item Value", "Max Item Value" == core.DB.modes.MaxBehavior, false
     LibDD:UIDropDownMenu_AddButton(MaxBehavior)
-    MaxBehavior.Text, MaxBehavior.arg1, MaxBehavior.checked, MaxBehavior.isNotRadio = L["MAXBIDBEHAVIORMIN"], "Min(Max DKP, Max Item Value)", "Min(Max DKP, Max Item Value)" == core.DB.modes.MaxBehavior, false
+    MaxBehavior.text, MaxBehavior.arg1, MaxBehavior.checked, MaxBehavior.isNotRadio = L["MAXBIDBEHAVIORMIN"], "Min(Max DKP, Max Item Value)", "Min(Max DKP, Max Item Value)" == core.DB.modes.MaxBehavior, false
     LibDD:UIDropDownMenu_AddButton(MaxBehavior)
   end)
 
@@ -399,11 +399,11 @@ function CommDKP:DKPModes_Main()
     OpenChannel.fontObject = "CommDKPSmallCenter"
     OpenChannel.keepShownOnClick = true;
     OpenChannel.isNotRadio = true;
-    OpenChannel.Text, OpenChannel.arg1, OpenChannel.checked = L["WHISPER"], "Whisper", true == core.DB.modes.channels.whisper
+    OpenChannel.text, OpenChannel.arg1, OpenChannel.checked = L["WHISPER"], "Whisper", true == core.DB.modes.channels.whisper
     LibDD:UIDropDownMenu_AddButton(OpenChannel)
-    OpenChannel.Text, OpenChannel.arg1, OpenChannel.checked = L["RAID"], "Raid", true == core.DB.modes.channels.raid
+    OpenChannel.text, OpenChannel.arg1, OpenChannel.checked = L["RAID"], "Raid", true == core.DB.modes.channels.raid
     LibDD:UIDropDownMenu_AddButton(OpenChannel)
-    OpenChannel.Text, OpenChannel.arg1, OpenChannel.checked = L["GUILD"], "Guild", true == core.DB.modes.channels.guild
+    OpenChannel.text, OpenChannel.arg1, OpenChannel.checked = L["GUILD"], "Guild", true == core.DB.modes.channels.guild
     LibDD:UIDropDownMenu_AddButton(OpenChannel)
   end)
 
@@ -462,11 +462,11 @@ function CommDKP:DKPModes_Main()
   local CostSelect = LibDD:UIDropDownMenu_CreateInfo()
     CostSelect.func = self.SetValue
     CostSelect.fontObject = "CommDKPSmallCenter"
-    CostSelect.Text, CostSelect.arg1, CostSelect.checked, CostSelect.isNotRadio = L["FIRSTBIDDER"], "First Bidder", "First Bidder" == core.DB.modes.CostSelection, false
+    CostSelect.text, CostSelect.arg1, CostSelect.checked, CostSelect.isNotRadio = L["FIRSTBIDDER"], "First Bidder", "First Bidder" == core.DB.modes.CostSelection, false
     LibDD:UIDropDownMenu_AddButton(CostSelect)
-    CostSelect.Text, CostSelect.arg1, CostSelect.checked, CostSelect.isNotRadio = L["SECONDBIDDER"], "Second Bidder", "Second Bidder" == core.DB.modes.CostSelection, false
+    CostSelect.text, CostSelect.arg1, CostSelect.checked, CostSelect.isNotRadio = L["SECONDBIDDER"], "Second Bidder", "Second Bidder" == core.DB.modes.CostSelection, false
     LibDD:UIDropDownMenu_AddButton(CostSelect)
-    CostSelect.Text, CostSelect.arg1, CostSelect.checked, CostSelect.isNotRadio = L["SECONDBIDDERORMIN"], "Second Bidder or Min", "Second Bidder or Min" == core.DB.modes.CostSelection, false
+    CostSelect.text, CostSelect.arg1, CostSelect.checked, CostSelect.isNotRadio = L["SECONDBIDDERORMIN"], "Second Bidder or Min", "Second Bidder or Min" == core.DB.modes.CostSelection, false
     LibDD:UIDropDownMenu_AddButton(CostSelect)
   end)
   
@@ -578,9 +578,9 @@ function CommDKP:DKPModes_Main()
   local BidType = LibDD:UIDropDownMenu_CreateInfo()
     BidType.func = self.SetValue
     BidType.fontObject = "CommDKPSmallCenter"
-    BidType.Text, BidType.arg1, BidType.checked, BidType.isNotRadio = L["STATIC"], "Static", "Static" == core.DB.modes.ZeroSumBidType, false
+    BidType.text, BidType.arg1, BidType.checked, BidType.isNotRadio = L["STATIC"], "Static", "Static" == core.DB.modes.ZeroSumBidType, false
     LibDD:UIDropDownMenu_AddButton(BidType)
-    BidType.Text, BidType.arg1, BidType.checked, BidType.isNotRadio = L["MINIMUMBID"], "Minimum Bid", "Minimum Bid" == core.DB.modes.ZeroSumBidType, false
+    BidType.text, BidType.arg1, BidType.checked, BidType.isNotRadio = L["MINIMUMBID"], "Minimum Bid", "Minimum Bid" == core.DB.modes.ZeroSumBidType, false
     LibDD:UIDropDownMenu_AddButton(BidType)
   end)
 
@@ -644,9 +644,9 @@ function CommDKP:DKPModes_Main()
       local CostValue = LibDD:UIDropDownMenu_CreateInfo()
       CostValue.func = self.SetValue
       CostValue.fontObject = "CommDKPSmallCenter"
-      CostValue.Text, CostValue.arg1, CostValue.checked, CostValue.isNotRadio = L["INTEGER"], "Integer", "Integer" == core.DB.modes.costvalue, false
+      CostValue.text, CostValue.arg1, CostValue.checked, CostValue.isNotRadio = L["INTEGER"], "Integer", "Integer" == core.DB.modes.costvalue, false
       LibDD:UIDropDownMenu_AddButton(CostValue)
-      CostValue.Text, CostValue.arg1, CostValue.checked, CostValue.isNotRadio = L["PERCENT"], "Percent", "Percent" == core.DB.modes.costvalue, false
+      CostValue.text, CostValue.arg1, CostValue.checked, CostValue.isNotRadio = L["PERCENT"], "Percent", "Percent" == core.DB.modes.costvalue, false
       LibDD:UIDropDownMenu_AddButton(CostValue)
     end)
   
@@ -725,9 +725,9 @@ function CommDKP:DKPModes_Main()
   f.DKPModesMain.SubZeroBidding = CreateFrame("CheckButton", nil, f.DKPModesMain, "UICheckButtonTemplate");
   f.DKPModesMain.SubZeroBidding:SetChecked(core.DB.modes.SubZeroBidding)
   f.DKPModesMain.SubZeroBidding:SetScale(0.6);
-  f.DKPModesMain.SubZeroBidding.Text:SetText("  |cff5151de"..L["SUBZEROBIDDING"].."|r");
-  f.DKPModesMain.SubZeroBidding.Text:SetScale(1.5);
-  f.DKPModesMain.SubZeroBidding.Text:SetFontObject("CommDKPSmallLeft")
+  f.DKPModesMain.SubZeroBidding.text:SetText("  |cff5151de"..L["SUBZEROBIDDING"].."|r");
+  f.DKPModesMain.SubZeroBidding.text:SetScale(1.5);
+  f.DKPModesMain.SubZeroBidding.text:SetFontObject("CommDKPSmallLeft")
   f.DKPModesMain.SubZeroBidding:SetPoint("TOP", f.DKPModesMain.ModesDropDown, "BOTTOMLEFT", 60, 0);
   f.DKPModesMain.SubZeroBidding:SetScript("OnClick", function(self)
     if self:GetChecked() == true then
@@ -760,9 +760,9 @@ function CommDKP:DKPModes_Main()
   f.DKPModesMain.AllowNegativeBidders = CreateFrame("CheckButton", nil, f.DKPModesMain, "UICheckButtonTemplate");
   f.DKPModesMain.AllowNegativeBidders:SetChecked(core.DB.modes.AllowNegativeBidders)
   f.DKPModesMain.AllowNegativeBidders:SetScale(0.6);
-  f.DKPModesMain.AllowNegativeBidders.Text:SetText("  |cff5151de"..L["ALLOWNEGATIVEBIDDERS"].."|r");
-  f.DKPModesMain.AllowNegativeBidders.Text:SetScale(1.5);
-  f.DKPModesMain.AllowNegativeBidders.Text:SetFontObject("CommDKPSmallLeft")
+  f.DKPModesMain.AllowNegativeBidders.text:SetText("  |cff5151de"..L["ALLOWNEGATIVEBIDDERS"].."|r");
+  f.DKPModesMain.AllowNegativeBidders.text:SetScale(1.5);
+  f.DKPModesMain.AllowNegativeBidders.text:SetFontObject("CommDKPSmallLeft")
   f.DKPModesMain.AllowNegativeBidders:SetPoint("TOPLEFT", f.DKPModesMain.SubZeroBidding, "BOTTOMLEFT", 0, 0);
   f.DKPModesMain.AllowNegativeBidders:SetScript("OnClick", function(self)
     if self:GetChecked() == true then
@@ -838,12 +838,12 @@ function CommDKP:DKPModes_Main()
             local _rollMode = LibDD:UIDropDownMenu_CreateInfo()
             _rollMode.func = self.SetValue
             _rollMode.fontObject = "CommDKPSmallCenter"
-            _rollMode.Text = "Default"
+            _rollMode.text = "Default"
             _rollMode.arg1 = "Default"
             _rollMode.checked = ("Default" == core.DB.modes.RollMode)
             _rollMode.isNotRadio = false
             LibDD:UIDropDownMenu_AddButton(_rollMode)
-            _rollMode.Text = "Ni Karma"
+            _rollMode.text = "Ni Karma"
             _rollMode.arg1 = "Ni Karma"
             _rollMode.checked = ("Ni Karma" == core.DB.modes.RollMode)
             _rollMode.isNotRadio = false
@@ -866,7 +866,7 @@ function CommDKP:DKPModes_Main()
         if arg1 == "Default" then
           core.DB.modes.RollMode = "Default"
           f.DKPModesMain.RollContainer.UsePerc:Show()
-          f.DKPModesMain.RollContainer.UsePerc.Text:Show()
+          f.DKPModesMain.RollContainer.UsePerc.text:Show()
           f.DKPModesMain.RollContainer.AddMax:Show()
           f.DKPModesMain.RollContainer.AddMax.Header:Show()
           f.DKPModesMain.RollContainer.maxKarma:Hide()
@@ -874,7 +874,7 @@ function CommDKP:DKPModes_Main()
         elseif arg1 == "Ni Karma" then
           core.DB.modes.RollMode = "Ni Karma"
           f.DKPModesMain.RollContainer.UsePerc:Hide()
-          f.DKPModesMain.RollContainer.UsePerc.Text:Hide()
+          f.DKPModesMain.RollContainer.UsePerc.text:Hide()
           f.DKPModesMain.RollContainer.AddMax:Hide()
           f.DKPModesMain.RollContainer.AddMax.Header:Hide()
           f.DKPModesMain.RollContainer.maxKarma:Show()
@@ -1068,9 +1068,9 @@ function CommDKP:DKPModes_Main()
                   
         f.DKPModesMain.RollContainer.UsePerc:SetChecked(core.DB.modes.rolls.UsePerc)
         f.DKPModesMain.RollContainer.UsePerc:SetScale(0.6);
-        f.DKPModesMain.RollContainer.UsePerc.Text:SetText("  |cff5151de"..L["USEPERCENTAGE"].."|r");
-        f.DKPModesMain.RollContainer.UsePerc.Text:SetScale(1.5);
-        f.DKPModesMain.RollContainer.UsePerc.Text:SetFontObject("CommDKPSmallLeft")
+        f.DKPModesMain.RollContainer.UsePerc.text:SetText("  |cff5151de"..L["USEPERCENTAGE"].."|r");
+        f.DKPModesMain.RollContainer.UsePerc.text:SetScale(1.5);
+        f.DKPModesMain.RollContainer.UsePerc.text:SetFontObject("CommDKPSmallLeft")
         f.DKPModesMain.RollContainer.UsePerc:SetPoint("TOP", f.DKPModesMain.RollContainer.rollMin, "BOTTOMLEFT", 0, -10);
         f.DKPModesMain.RollContainer.UsePerc:SetScript("OnClick", function(self)
         core.DB.modes.rolls.UsePerc = self:GetChecked();
@@ -1152,7 +1152,7 @@ function CommDKP:DKPModes_Main()
       -- hide default roll extra options if Ni Karma is selected
       if core.DB.modes.RollMode == "Ni Karma" then
         f.DKPModesMain.RollContainer.UsePerc:Hide()
-        f.DKPModesMain.RollContainer.UsePerc.Text:Hide()
+        f.DKPModesMain.RollContainer.UsePerc.text:Hide()
         f.DKPModesMain.RollContainer.AddMax:Hide()
         f.DKPModesMain.RollContainer.AddMax.Header:Hide()
       end

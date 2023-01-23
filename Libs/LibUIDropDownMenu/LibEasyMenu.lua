@@ -35,7 +35,7 @@ end
 function EasyMenu_Initialize( frame, level, menuList )
 	for index = 1, #menuList do
 		local value = menuList[index]
-		if (value.Text) then
+		if (value.text) then
 			value.index = index;
 			UIDropDownMenu_AddButton( value, level );
 		end
